@@ -1,0 +1,26 @@
+<form>
+  <div class="mb-3">
+    <label for="idCategory" class="form-label">Category</label>
+      <select class="form-control" name="idCategory" id="idCategory" [(ngModel)]="idCategory" *ngIf="product.id==0">
+        <option *ngFor="let type of categoryList$ | async" [ngValue]="type.id">{{type.nameCategory}}</option>
+      </select>
+      <select class="form-control" name="idCategory" id="idCategory" [(ngModel)]="idCategory" *ngIf="product.id!=0">
+        <option *ngFor="let type of categoryList$ | async" [ngValue]="type.id">{{type.nameCategory}}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+        <label for="nameProduct" class="form-label">Product Name</label>
+    <input type="text" class="form-control" [(ngModel)]="nameProduct" name="nameProduct">
+    </div>
+  <button (click)="addProduct()" *ngIf="product.id==0" class="btn btn-primary">
+      Add Product
+    </button>
+    <button (click)="updateProduct()" *ngIf="product.id!=0" class="btn btn-primary">
+      Update Product
+    </button>
+    
+
+  
+
+  
+
