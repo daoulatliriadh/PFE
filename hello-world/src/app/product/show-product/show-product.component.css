@@ -1,0 +1,25 @@
+#add-successc-alert,
+#add-success-alert,
+#update-success-alert,
+#delete-success-alert{
+display: none;
+}
+#add-successc-alerte,
+#add-success-alerte,
+#update-success-alerte,
+#delete-success-alerte{
+animation-name: fadeInAndOut;
+animation-duration: 4s;
+}
+
+@-webkit-keyframes fadeInAndOut{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeInAndOut{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
